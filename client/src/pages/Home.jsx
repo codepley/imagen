@@ -24,6 +24,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
+        setLoading(true)
         const response = await fetch('https://imagen-api.onrender.com/api/v1/post', {
           method: 'GET',
           headers: {
